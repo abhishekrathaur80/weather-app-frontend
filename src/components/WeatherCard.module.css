@@ -1,0 +1,48 @@
+.weatherCard {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tabContainer {
+  display: flex;
+}
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: 4px solid white;
+  border-radius: 10px;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.tab.active {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgb(104, 186, 225);
+  border: 4px solid rgb(104, 186, 225);
+  color: black;
+}
+
+.weatherInfo {
+  margin-top: 10px;
+}
+
+.daySummary {
+  text-align: center;
+}
+
+.temperature {
+  margin-bottom: 10px;
+}
+.temperature span {
+  margin: 3px;
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}

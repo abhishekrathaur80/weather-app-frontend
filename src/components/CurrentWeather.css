@@ -1,0 +1,67 @@
+
+
+.current-day-container {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+  }
+  
+  .temperature-container {
+    display: flex;
+   
+    justify-content: flex-start; 
+  }
+  
+  .temperature-container h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+  
+  .icon-container {
+    width: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+  
+  }
+  
+  .hourly-chart-container {
+    width: 100%;
+    max-width: 600px;
+    
+  }
+  
+  .pressure-humidity-container {
+    display: flex;
+    justify-content: space-around;
+   
+  }
+  .pressure-humidity-container .humidity{
+    background-color: rgb(231, 231, 246);
+    width: 150px;
+    text-align: center;
+    height: 100px;
+  }
+  
+  .sun-chart-container {
+position: relative;
+width: 100%;
+min-height: 36px;
+background-color: white;
+margin-top: 2px;
+  }
+  .sunrise{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    color: black;
+    padding: 3;
+  }
+
+
+  
