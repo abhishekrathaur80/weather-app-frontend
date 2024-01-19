@@ -19,9 +19,11 @@ function App() {
     setSelectedDayData(data);
   };
 
-  const fetchDataHandler = (data) => {
-    //console.log(data);
-    setWeatherData(data);
+   const fetchDataHandler = (data) => {
+    // console.log(data);
+    setWeatherData((prevWeatherData) => {
+      return { ...prevWeatherData, ...data };
+    });
   };
 
   useEffect(() => {
@@ -40,6 +42,7 @@ function App() {
       }
     };
 
+    
     const getLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -61,13 +64,21 @@ function App() {
     getLocation();
   }, []);
 
+    const foreCastDataHandler = (data) => {
+    try {
+      console.log(data);
+      setdaysData(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className={classes.container}>
-      <WeatherInput onFetchData={fetchDataHandler} />
+      <WeatherInput onFetchData={fetchDataHandler}  onForeCastData={foreCastDataHandler} />
       {daysData.length === 0 ? (
         <BiLoaderCircle size={100} />
       ) : (
-        <WeatherCard data={daysData} onSelectedDay={hadleSelectedDay} />
+        <WeatherCard data={daysData} onSelectedDay={hadleSelectedDay}  />
       )}
       {daysData.length === 0 ? (
         <BiLoaderCircle size={100} color="white" />
